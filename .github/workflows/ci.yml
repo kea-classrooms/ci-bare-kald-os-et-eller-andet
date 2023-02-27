@@ -32,6 +32,6 @@ jobs:
         run: echo "SHA-1 hash " + ${{ github.sha }}
         
       - name: verify_issue
-        run: echo "verify_issue" +  ${{ github.ref }}´ | -c -7
+        run: echo "verify_issue" +  ${{ github.ref }}
 
 
