@@ -1,0 +1,15 @@
+name: Trigger_warning
+
+on: 
+  push:
+    branches: branch[master]
+    
+
+jobs:
+  build:
+    name: "mainline"
+    runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        -  run: echo "SHA-1 hash: ${{ github.sha }}" 
+      
