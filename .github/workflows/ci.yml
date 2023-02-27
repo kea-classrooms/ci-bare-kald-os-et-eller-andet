@@ -2,7 +2,8 @@ name: Trigger_warning
 
 on:
   push:
-    branches: ${{ github.master }} 
+    branches:
+      - 'master'
 
     
 env: 
