@@ -11,4 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v24
+      - name: "Print SHA1"
       - run: echo ${{ github.sha }}
