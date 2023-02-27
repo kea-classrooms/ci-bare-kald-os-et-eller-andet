@@ -1,0 +1,19 @@
+name: Issue verification
+
+on:
+  push:
+    branches:
+      - "**/issue**"
+      
+jobs:
+  verify_issue:
+    name: "verify issues"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Issue verification
+      - uses: actions/checkout@v2
+      
+      - name: Issue verification
+      - run: echo "verify_issue " +  ${{ github.ref }}
+      
+    
