@@ -1,0 +1,36 @@
+name: Trigger_warning
+
+on:
+  push:
+    branches:
+      - 'master'
+ 
+      
+
+    
+env: 
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+permissions:
+  checks: write
+  actions: write
+  contents: read
+  issues: write
+
+
+jobs:
+  build:
+    name: "mainline"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+        
+      - name: Display SHA-1 Hash
+        run: echo "SHA-1 hash " + ${{ github.sha }}
+        
+      - name: Display SHA-1 Hash
+        run: echo "SHA-1 hash " + $(git rev-parse HEAD| cut -c -7)
+
+
+
