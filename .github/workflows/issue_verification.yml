@@ -11,9 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Issue verification
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
       
       - name: Issue verification
-      - run: echo "verify_issue " +  ${{ github.ref }}
+        run: echo "verify_issue " +  ${{ github.ref }}
       
-    
