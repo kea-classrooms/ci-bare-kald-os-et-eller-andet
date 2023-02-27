@@ -27,12 +27,11 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
+        
       - name: Display SHA-1 Hash
         run: echo "SHA-1 hash " + ${{ github.sha }}
         
-      - name: Checkout Code
-        uses: actions/checkout@v2
-      - name: Display Branch Name
-        run: echo "Branch name" +  ${{ github.ref }}
+      - name: verify_issue
+        run: echo "verify_issue" +  ${{ github.ref }}
 
 
