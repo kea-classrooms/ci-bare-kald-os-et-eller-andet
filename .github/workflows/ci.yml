@@ -2,8 +2,8 @@ name: Trigger_warning
 
 on:
   push:
-    branches: 
-      - 'github.master'
+    branches: ${{ github.master }} 
+
     
 env: 
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
