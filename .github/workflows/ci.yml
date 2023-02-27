@@ -1,17 +1,25 @@
-name: Trigger_warning
+name: On push echo
 
-on: 
+on:
   push:
     branches: 
-        - ´master´
-    
+      - 'master'
+
+env: 
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+permissions:
+  checks: write
+  actions: write
+  contents: read
+  issues: write
+
 jobs:
-  build:
-    name: "mainline"
+  mainline:
+    name: "Mainline"
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
+      - name: checkout
         uses: actions/checkout@v2
-      - name: Display SHA-1 Hash
-        run: echo "SHA-1 hash " + ${{ github.sha }}
-        
+      - name: Print commit SHA1
+        run: echo "SHA1 hash "+ ${{ github.sha }}
