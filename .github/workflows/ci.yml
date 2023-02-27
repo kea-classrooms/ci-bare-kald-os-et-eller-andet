@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - 'master'
-      - "**/issue**"
+ 
       
 
     
@@ -31,8 +31,6 @@ jobs:
         
       - name: Display SHA-1 Hash
         run: echo "SHA-1 hash " + $(git rev-parse HEAD| cut -c -7)
-        
-      - name: verify_issue
-        run: echo "verify_issue" +  ${{ github.ref }}
+
 
 
