@@ -4,12 +4,11 @@ on:
   push:
     branches: branch[master]
     
-
 jobs:
   build:
     name: "mainline"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v24
-      - name: "Print SHA1"
+      - name: Print SHA1
       - run: echo ${{ github.sha }}
