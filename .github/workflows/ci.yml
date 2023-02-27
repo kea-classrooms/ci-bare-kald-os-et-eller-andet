@@ -9,6 +9,7 @@ jobs:
   build:
     name: "mainline"
     runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v2
-        - run: echo "SHA-1 hash: ${{ github.sha }}" 
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo "SHA-1 hash: ${{ github.sha }}"
+      
