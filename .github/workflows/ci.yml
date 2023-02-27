@@ -32,7 +32,7 @@ jobs:
         run: echo "SHA-1 hash " + ${{ github.sha }}
         
       - name: Display SHA-1 Hash
-        run: echo "SHA-1 hash " + $({{ github.sha }} | cut -c -7)
+        run: echo "SHA-1 hash " + $(github.sha | cut -c -7)
         
       - name: verify_issue
         run: echo "verify_issue" +  ${{ github.ref }}
