@@ -16,4 +16,3 @@ jobs:
       - name: Issue verification
         run: echo "verify_issue " +  ${{ github.ref }}
       
-    
